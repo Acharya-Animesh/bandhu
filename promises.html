@@ -1,0 +1,22 @@
+<script>
+    var record = new Promise((res,rej)=>{
+        //promises has 3 states(1.pending 2.resolved(handle by then) 3.rejected(by catch))
+        console.log(typeof res,typeof rej);
+        res("task is completed")
+        //rej("task is Incomplete")
+    })
+    console.log(record);
+    record.then((value)=>{
+        console.log(value);
+    })  //'then' is a handler for resolved values (holds resolved value)
+
+    .catch((error)=>{     //handler used only for rejection values
+        console.log(error);
+    })
+    
+    .finally(()=>{   //after resolve and rejected process
+        console.log("proceed for next task");
+    })
+</script>
+<!-- promise is a class in JS..answer will be in yes(resolve) or not(rejection) -->
+<!-- promises will not in pending status -->

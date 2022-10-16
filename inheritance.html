@@ -1,0 +1,21 @@
+<!-- Inheritance -->
+<script>
+    class a{
+        myfunction1(){
+            console.log("class a");
+        }
+    }
+    class b extends a{
+        myfunction2(){
+            console.log("class b");
+        }
+        myfunction2(){
+            // super.myfunction1();
+            console.log("class b myfunction_1");  //Method over-riding by child class.
+        }
+    }
+        var rec =new b
+        console.log(rec);
+        rec.myfunction1();
+        rec.myfunction2();
+</script>
